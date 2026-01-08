@@ -4,12 +4,16 @@ import java.io.UnsupportedEncodingException;
 import java.nio.ByteOrder;
 import java.nio.IntBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 import javax.media.opengl.GLCapabilities;
 import javax.media.opengl.GLCapabilitiesChooser;
 import javax.media.opengl.GLContext;
 import javax.media.opengl.GLDrawable;
 import javax.media.opengl.GLDrawableFactory;
+import javax.media.opengl.GLProfile;
 import javax.media.opengl.glu.GLU;
+import javax.media.nativewindow.AbstractGraphicsConfiguration;
+import javax.media.nativewindow.NativeWindowFactory;
 
 final class HDToolKit {
 
@@ -32,7 +36,7 @@ final class HDToolKit {
    private static float aFloat1801 = 0.09765625F;
    static boolean aBoolean1802;
    private static int anInt1803 = -1;
-   static GL gl;
+   static GL2 gl;
    private static boolean aBoolean1805 = true;
    private static int anInt1806;
    static boolean highDetail = false;
@@ -246,8 +250,11 @@ final class HDToolKit {
             return;
          }
 
-         GLDrawableFactory var1 = GLDrawableFactory.getFactory();
-         GLDrawable var2 = var1.getGLDrawable(var0, (GLCapabilities)null, (GLCapabilitiesChooser)null);
+         GLProfile profile = GLProfile.getDefault();
+         GLCapabilities caps = new GLCapabilities(profile);
+         GLDrawableFactory var1 = GLDrawableFactory.getFactory(profile);
+         AbstractGraphicsConfiguration config = NativeWindowFactory.getNativeWindow(var0, null).getGraphicsConfiguration();
+         GLDrawable var2 = var1.createGLDrawable(NativeWindowFactory.getNativeWindow(var0, config));
          var2.setRealized(true);
          GLContext var3 = var2.createContext((GLContext)null);
          var3.makeCurrent();
@@ -394,7 +401,7 @@ final class HDToolKit {
          if(aBoolean1813) {
             try {
                int[] var14 = new int[1];
-               gl.glGenBuffersARB(1, var14, 0);
+               gl.glGenBuffers(1, var14, 0);
             } catch (Throwable var10) {
                return -4;
             }
@@ -590,14 +597,16 @@ final class HDToolKit {
          if(!var0.isDisplayable()) {
             return -1;
          } else {
-            GLCapabilities var2 = new GLCapabilities();
+            GLProfile profile = GLProfile.getDefault();
+            GLCapabilities var2 = new GLCapabilities(profile);
             if(var1 > 0) {
                var2.setSampleBuffers(true);
                var2.setNumSamples(var1);
             }
 
-            GLDrawableFactory var3 = GLDrawableFactory.getFactory();
-            aGLDrawable1815 = var3.getGLDrawable(var0, var2, (GLCapabilitiesChooser)null);
+            GLDrawableFactory var3 = GLDrawableFactory.getFactory(profile);
+            AbstractGraphicsConfiguration config = NativeWindowFactory.getNativeWindow(var0, null).getGraphicsConfiguration();
+            aGLDrawable1815 = var3.createGLDrawable(NativeWindowFactory.getNativeWindow(var0, config));
             aGLDrawable1815.setRealized(true);
             int var4 = 0;
 
@@ -621,7 +630,7 @@ final class HDToolKit {
                Class3_Sub13_Sub34.method331(1000L, 64);
             }
 
-            gl = aGLContext1800.getGL();
+            gl = aGLContext1800.getGL().getGL2();
             new GLU();
             highDetail = true;
             anInt1820 = var0.getSize().width;

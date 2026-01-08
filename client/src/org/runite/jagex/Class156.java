@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class156 {
 
@@ -12,9 +13,9 @@ final class Class156 {
 
    final void method2168(ByteBuffer var1) {
       if(var1.limit() <= this.anInt1993) {
-         GL var2 = HDToolKit.gl;
-         var2.glBindBufferARB('\u8892', this.anInt1991);
-         var2.glBufferSubDataARB('\u8892', 0, var1.limit(), var1);
+         GL2 var2 = HDToolKit.gl;
+         var2.glBindBuffer('\u8892', this.anInt1991);
+         var2.glBufferSubData('\u8892', 0, var1.limit(), var1);
       } else {
          this.method2172(var1);
       }
@@ -32,8 +33,8 @@ final class Class156 {
    }
 
    final void method2169() {
-      GL var1 = HDToolKit.gl;
-      var1.glBindBufferARB('\u8892', this.anInt1991);
+      GL2 var1 = HDToolKit.gl;
+      var1.glBindBuffer('\u8892', this.anInt1991);
    }
 
    public Class156() {
@@ -41,22 +42,22 @@ final class Class156 {
    }
 
    final void method2170(ByteBuffer var1) {
-      GL var2 = HDToolKit.gl;
-      var2.glBindBufferARB('\u8893', this.anInt1991);
-      var2.glBufferDataARB('\u8893', var1.limit(), var1, this.aBoolean1994?'\u88e0':'\u88e4');
+      GL2 var2 = HDToolKit.gl;
+      var2.glBindBuffer('\u8893', this.anInt1991);
+      var2.glBufferData('\u8893', var1.limit(), var1, this.aBoolean1994?'\u88e0':'\u88e4');
       Class31.anInt585 += var1.limit() - this.anInt1993;
       this.anInt1993 = var1.limit();
    }
 
    final void method2171() {
-      GL var1 = HDToolKit.gl;
-      var1.glBindBufferARB('\u8893', this.anInt1991);
+      GL2 var1 = HDToolKit.gl;
+      var1.glBindBuffer('\u8893', this.anInt1991);
    }
 
    final void method2172(ByteBuffer var1) {
-      GL var2 = HDToolKit.gl;
-      var2.glBindBufferARB('\u8892', this.anInt1991);
-      var2.glBufferDataARB('\u8892', var1.limit(), var1, this.aBoolean1994?'\u88e0':'\u88e4');
+      GL2 var2 = HDToolKit.gl;
+      var2.glBindBuffer('\u8892', this.anInt1991);
+      var2.glBufferData('\u8892', var1.limit(), var1, this.aBoolean1994?'\u88e0':'\u88e4');
       Class31.anInt585 += var1.limit() - this.anInt1993;
       this.anInt1993 = var1.limit();
    }
@@ -64,9 +65,9 @@ final class Class156 {
    Class156(boolean var1) {
       this.anInt1991 = -1;
       this.anInt1993 = 0;
-      GL var2 = HDToolKit.gl;
+      GL2 var2 = HDToolKit.gl;
       int[] var3 = new int[1];
-      var2.glGenBuffersARB(1, var3, 0);
+      var2.glGenBuffers(1, var3, 0);
       this.aBoolean1994 = var1;
       this.anInt1991 = var3[0];
       this.anInt1992 = Class31.anInt582;

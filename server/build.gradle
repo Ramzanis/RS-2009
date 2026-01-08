@@ -1,0 +1,40 @@
+// Root build file for 09HDscape multi-module project
+
+subprojects {
+    apply plugin: 'java'
+
+    // Default repositories for all subprojects
+    repositories {
+        mavenCentral()
+        // Fallback for older/unusual libraries
+        maven { url 'https://jitpack.io' }
+    }
+
+    // Set Java version compatibility
+    java {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    // Common dependencies that all modules might use
+    dependencies {
+        // Add common dependencies here if needed
+    }
+
+    // Default source sets (matches IntelliJ structure)
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src']
+            }
+            resources {
+                srcDirs = ['res', 'resources']
+            }
+        }
+    }
+
+    // Encoding settings
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+}

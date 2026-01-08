@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 import javax.media.opengl.glu.GLU;
 
 final class Class3_Sub28_Sub20 extends Node {
@@ -142,7 +143,7 @@ final class Class3_Sub28_Sub20 extends Node {
          if(var3 != 579100487) {
             return false;
          } else if(this.aClass82_3790.method1408(true, var2, var1)) {
-            GL var5 = HDToolKit.gl;
+            GL2 var5 = HDToolKit.gl;
             int var6 = !var4?128:64;
             int var7 = Class27.method961(1536);
             if(~(1 & var7) == -1) {

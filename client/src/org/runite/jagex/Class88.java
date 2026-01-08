@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class88 {
 
@@ -36,7 +37,7 @@ final class Class88 {
    }
 
    static final void method1455() {
-      GL var0;
+      GL2 var0;
       int[] var1;
       if(anInt1228 != -1) {
          var0 = HDToolKit.gl;
@@ -85,7 +86,7 @@ final class Class88 {
    }
 
    private static final void method1458() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       if(aBoolean1227) {
          int[] var1 = new int[1];
          var0.glGenTextures(1, var1, 0);
@@ -114,7 +115,7 @@ final class Class88 {
    }
 
    private static final void method1459() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       if(aBoolean1227) {
          int[] var1 = new int[1];
          var0.glGenTextures(1, var1, 0);

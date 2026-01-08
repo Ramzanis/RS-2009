@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class31 {
 
@@ -59,14 +60,14 @@ final class Class31 {
    }
 
    static final synchronized void method990() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       int var1 = 0;
 
       while(true) {
          Class3_Sub18 var2 = (Class3_Sub18)aClass61_581.method1220((byte)-3);
          if(var2 == null) {
             if(var1 > 0) {
-               var0.glDeleteBuffersARB(var1, anIntArray589, 0);
+               var0.glDeleteBuffers(var1, anIntArray589, 0);
                var1 = 0;
             }
 
@@ -118,7 +119,7 @@ final class Class31 {
          anIntArray589[var1++] = (int)var2.aLong71;
          anInt585 -= var2.anInt2467;
          if(var1 == 1000) {
-            var0.glDeleteBuffersARB(var1, anIntArray589, 0);
+            var0.glDeleteBuffers(var1, anIntArray589, 0);
             var1 = 0;
          }
       }

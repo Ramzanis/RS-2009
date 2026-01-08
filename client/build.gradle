@@ -1,0 +1,20 @@
+apply plugin: 'application'
+
+base {
+    archivesName = 'client'
+}
+
+dependencies {
+
+    implementation 'com.github.insubstantial:laf-plugin:7.2.1'
+    implementation 'com.github.insubstantial:laf-widget:7.2.1'
+    implementation 'com.github.insubstantial:substance:7.2.1'
+    implementation 'com.github.insubstantial:trident:7.2.1'
+    implementation 'org.jogamp.jogl:jogl-all:2.2.4'
+    implementation 'org.jogamp.gluegen:gluegen-rt:2.2.4'
+
+}
+
+application {
+    mainClass = 'org.runite.GameLaunch'
+}

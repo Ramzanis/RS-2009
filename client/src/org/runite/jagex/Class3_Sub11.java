@@ -236,7 +236,7 @@ final class Class3_Sub11 extends Class3 {
       }
 
       if(aClass3_Sub30_2372.index != 0 || aClass3_Sub30_2362.index != 0) {
-         GL var10 = HDToolKit.gl;
+         GL2 var10 = HDToolKit.gl;
          if(this.anInt2351 != -1 && !var3) {
             Class51.anInterface2_838.method8(this.anInt2351, true);
          } else {
@@ -261,7 +261,7 @@ final class Class3_Sub11 extends Class3 {
             }
          } else {
             if(HDToolKit.aBoolean1813) {
-               var10.glBindBufferARB('\u8892', 0);
+               var10.glBindBuffer('\u8892', 0);
             }
 
             this.aByteBuffer2345.position(0);
@@ -284,7 +284,7 @@ final class Class3_Sub11 extends Class3 {
          }
 
          if(HDToolKit.aBoolean1813) {
-            var10.glBindBufferARB('\u8893', 0);
+            var10.glBindBuffer('\u8893', 0);
          }
 
          if(aClass3_Sub30_2372.index != 0) {

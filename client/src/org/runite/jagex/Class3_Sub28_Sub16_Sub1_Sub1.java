@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class3_Sub28_Sub16_Sub1_Sub1 extends Class3_Sub28_Sub16_Sub1 {
 
@@ -29,7 +30,7 @@ final class Class3_Sub28_Sub16_Sub1_Sub1 extends Class3_Sub28_Sub16_Sub1 {
       }
 
       ByteBuffer var9 = ByteBuffer.wrap(var2);
-      GL var10 = HDToolKit.gl;
+      GL2 var10 = HDToolKit.gl;
       if(this.anInt4077 == -1) {
          int[] var11 = new int[1];
          var10.glGenTextures(1, var11, 0);

@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class37 {
 
@@ -154,7 +155,7 @@ final class Class37 {
    }
 
    final void method1021() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       if(HDToolKit.aBoolean1813) {
          this.aClass156_642.method2169();
          var1.glInterleavedArrays(10787, 16, 0L);
@@ -163,8 +164,8 @@ final class Class37 {
          var1.glDrawElements(4, this.anInt655, 5125, 0L);
       } else {
          if(HDToolKit.aBoolean1813) {
-            var1.glBindBufferARB('\u8892', 0);
-            var1.glBindBufferARB('\u8893', 0);
+            var1.glBindBuffer('\u8892', 0);
+            var1.glBindBuffer('\u8893', 0);
          }
 
          var1.glInterleavedArrays(10787, 16, this.aByteBuffer647);

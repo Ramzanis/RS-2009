@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class140_Sub1_Sub1 extends Model {
 
@@ -266,7 +267,7 @@ final class Class140_Sub1_Sub1 extends Model {
                               }
                            }
 
-                           GL var50 = HDToolKit.gl;
+                           GL2 var50 = HDToolKit.gl;
                            var50.glPushMatrix();
                            var50.glTranslatef((float)var6, (float)var7, (float)var8);
                            var50.glRotatef((float)var1 * 0.17578125F, 0.0F, 1.0F, 0.0F);
@@ -564,7 +565,7 @@ final class Class140_Sub1_Sub1 extends Model {
 
    final void method1893(int var1, int var2, int var3, int var4, int var5, int var6, int var7, long var8) {
       if(this.anInt3833 != 0) {
-         GL var10 = HDToolKit.gl;
+         GL2 var10 = HDToolKit.gl;
          var10.glPushMatrix();
          if(var4 != 0) {
             var10.glRotatef((float)var4 * 0.17578125F, 1.0F, 0.0F, 0.0F);
@@ -2882,7 +2883,7 @@ final class Class140_Sub1_Sub1 extends Model {
    }
 
    private final void method1930() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       if(this.anInt3852 != 0) {
          if(this.aByte3836 != 0) {
             this.method1922(true, !this.aClass121_3839.aBoolean1640 && (this.aByte3836 & 1) != 0, !this.aClass121_3814.aBoolean1640 && (this.aByte3836 & 2) != 0, this.aClass121_3815 != null && !this.aClass121_3815.aBoolean1640 && (this.aByte3836 & 4) != 0, false);
@@ -2968,7 +2969,7 @@ final class Class140_Sub1_Sub1 extends Model {
 
          if(this.aClass121_3839.aClass156_1643 == null || this.aClass121_3814.aClass156_1643 == null || Class106.aBoolean1441 && this.aClass121_3815.aClass156_1643 == null || this.aClass121_3817.aClass156_1643 == null) {
             if(HDToolKit.aBoolean1813) {
-               var1.glBindBufferARB('\u8892', 0);
+               var1.glBindBuffer('\u8892', 0);
             }
 
             if(this.aClass121_3839.aClass156_1643 == null) {
@@ -2993,7 +2994,7 @@ final class Class140_Sub1_Sub1 extends Model {
          }
 
          if(this.aClass121_3846.aClass156_1643 == null && HDToolKit.aBoolean1813) {
-            var1.glBindBufferARB('\u8893', 0);
+            var1.glBindBuffer('\u8893', 0);
          }
 
          int var3 = this.anIntArray3840.length - 1;

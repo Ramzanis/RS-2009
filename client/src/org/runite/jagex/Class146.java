@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.awt.Component;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 abstract class Class146 {
 
@@ -122,7 +123,7 @@ abstract class Class146 {
 
       boolean var22 = Class44.anIntArrayArrayArray723 == Class3_Sub28_Sub7.anIntArrayArrayArray3605;
       if(HDToolKit.highDetail) {
-         GL var24 = HDToolKit.gl;
+         GL2 var24 = HDToolKit.gl;
          var24.glPushMatrix();
          var24.glTranslatef((float)(-var0), (float)(-var1), (float)(-var2));
          if(var22) {

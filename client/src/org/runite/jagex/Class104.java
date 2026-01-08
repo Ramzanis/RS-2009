@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 import org.runite.GameLaunch;
 
@@ -365,7 +366,7 @@ final class Class104 implements Interface5 {
 
    public final void method23(int var1) {
       try {
-         GL var2 = HDToolKit.gl;
+         GL2 var2 = HDToolKit.gl;
          float var4 = (float)(1 + (var1 >> 3 & 3)) * 0.01F;
          float var3 = -0.01F * (float)(1 + (var1 & 3));
          float var5 = 0 == (var1 & 64)?4.8828125E-4F:9.765625E-4F;
@@ -416,7 +417,7 @@ final class Class104 implements Interface5 {
 
    public final void method21() {
       try {
-         GL var1 = HDToolKit.gl;
+         GL2 var1 = HDToolKit.gl;
          var1.glCallList(1 + this.anInt2173);
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ob.A()");
@@ -425,7 +426,7 @@ final class Class104 implements Interface5 {
 
    public final void method22() {
       try {
-         GL var1 = HDToolKit.gl;
+         GL2 var1 = HDToolKit.gl;
          var1.glCallList(this.anInt2173);
       } catch (RuntimeException var2) {
          throw Class44.method1067(var2, "ob.D()");
@@ -451,7 +452,7 @@ final class Class104 implements Interface5 {
 
    private final void method1631(int var1) {
       try {
-         GL var2 = HDToolKit.gl;
+         GL2 var2 = HDToolKit.gl;
          this.anInt2173 = var2.glGenLists(var1);
          var2.glNewList(this.anInt2173, 4864);
          var2.glActiveTexture('\u84c1');

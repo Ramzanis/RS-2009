@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class HDIndexedSprite extends AbstractIndexedSprite {
 
@@ -58,7 +59,7 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
       HDToolKit.method1828();
       var1 += this.anInt1470;
       var2 += this.anInt1464;
-      GL var4 = HDToolKit.gl;
+      GL2 var4 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt2675);
       this.method1679(1);
       var4.glColor4f(1.0F, 1.0F, 1.0F, (float)var3 / 256.0F);
@@ -70,7 +71,7 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
    private final void method1679(int var1) {
       if(this.anInt2677 != var1) {
          this.anInt2677 = var1;
-         GL var2 = HDToolKit.gl;
+         GL2 var2 = HDToolKit.gl;
          if(var1 == 2) {
             var2.glTexParameteri(3553, 10241, 9729);
             var2.glTexParameteri(3553, 10240, 9729);
@@ -86,7 +87,7 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
       HDToolKit.method1822();
       var1 += this.anInt1470;
       var2 += this.anInt1464;
-      GL var3 = HDToolKit.gl;
+      GL2 var3 = HDToolKit.gl;
       HDToolKit.bindTexture2D(this.anInt2675);
       this.method1679(1);
       var3.glTranslatef((float)var1, (float)(HDToolKit.anInt1811 - var2), 0.0F);
@@ -112,7 +113,7 @@ final class HDIndexedSprite extends AbstractIndexedSprite {
    private final void method1680() {
       float var1 = (float)this.anInt1461 / (float)this.anInt2681;
       float var2 = (float)this.anInt1468 / (float)this.anInt2680;
-      GL var3 = HDToolKit.gl;
+      GL2 var3 = HDToolKit.gl;
       if(this.anInt2676 == -1) {
          this.anInt2676 = var3.glGenLists(1);
          this.anInt2679 = Class31.anInt582;

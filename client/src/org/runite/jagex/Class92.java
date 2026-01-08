@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class92 {
 
@@ -19,7 +20,7 @@ final class Class92 {
 
 
    static final void method1504() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       var0.glLightfv(16384, 4611, aFloatArray1312, 0);
       var0.glLightfv(16385, 4611, aFloatArray1321, 0);
    }
@@ -34,7 +35,7 @@ final class Class92 {
          aFloat1320 = var1;
          aFloat1317 = var2;
          aFloat1318 = var3;
-         GL var4 = HDToolKit.gl;
+         GL2 var4 = HDToolKit.gl;
          float var5 = (float)(var0 >> 16 & 255) / 255.0F;
          float var6 = (float)(var0 >> 8 & 255) / 255.0F;
          float var7 = (float)(var0 & 255) / 255.0F;
@@ -57,7 +58,7 @@ final class Class92 {
       if(anInt1324 != var0 || anInt1323 != var1) {
          anInt1324 = var0;
          anInt1323 = var1;
-         GL var2 = HDToolKit.gl;
+         GL2 var2 = HDToolKit.gl;
          byte var3 = 50;
          short var4 = 3584;
          aFloatArray1319[0] = (float)(var0 >> 16 & 255) / 255.0F;
@@ -95,7 +96,7 @@ final class Class92 {
    }
 
    static final void method1511() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       var0.glColorMaterial(1028, 5634);
       var0.glEnable(2903);
       float[] var1 = new float[]{0.0F, 0.0F, 0.0F, 1.0F};
@@ -114,7 +115,7 @@ final class Class92 {
          var0 = aFloatArray1319;
       }
 
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       var1.glFogfv(2918, var0, 0);
    }
 

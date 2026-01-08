@@ -2,6 +2,7 @@ package org.runite.jagex;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class3_Sub28_Sub18 extends Node {
 
@@ -133,7 +134,7 @@ final class Class3_Sub28_Sub18 extends Node {
 
    Class3_Sub28_Sub18(int var1) {
       try {
-         GL var2 = HDToolKit.gl;
+         GL2 var2 = HDToolKit.gl;
          int[] var3 = new int[1];
          var2.glGenTextures(1, var3, 0);
          this.anInt3759 = var3[0];

@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class141 {
 
@@ -119,7 +120,7 @@ final class Class141 {
    }
 
    static final void method2038(int var0, int var1, int var2, int var3, boolean[][] var4, int[][] var5) {
-      GL var6 = HDToolKit.gl;
+      GL2 var6 = HDToolKit.gl;
       HDToolKit.method1856(1);
       HDToolKit.method1847(1);
       HDToolKit.method1823();

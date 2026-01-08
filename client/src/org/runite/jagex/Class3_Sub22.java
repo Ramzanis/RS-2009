@@ -1,5 +1,6 @@
 package org.runite.jagex;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class3_Sub22 extends Class3 {
 
@@ -229,7 +230,7 @@ final class Class3_Sub22 extends Class3 {
    }
 
    static final void method403() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       var0.glDisableClientState('\u8076');
       HDToolKit.method1837(false);
       var0.glDisable(2929);

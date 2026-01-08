@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.IntBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class22 {
 
@@ -20,7 +21,7 @@ final class Class22 {
       float var4 = (float)var0 + 0.3F;
       float var5 = var4 + (float)var2;
       float var6 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
-      GL var7 = HDToolKit.gl;
+      GL2 var7 = HDToolKit.gl;
       var7.glBegin(1);
       var7.glColor3ub((byte)(var3 >> 16), (byte)(var3 >> 8), (byte)var3);
       var7.glVertex2f(var4, var6);
@@ -37,7 +38,7 @@ final class Class22 {
       float var4 = (float)var0 + 0.3F;
       float var5 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
       float var6 = var5 - (float)var2;
-      GL var7 = HDToolKit.gl;
+      GL2 var7 = HDToolKit.gl;
       var7.glBegin(1);
       var7.glColor3ub((byte)(var3 >> 16), (byte)(var3 >> 8), (byte)var3);
       var7.glVertex2f(var4, var5);
@@ -50,14 +51,14 @@ final class Class22 {
       anInt448 = 0;
       anInt450 = HDToolKit.anInt1820;
       anInt451 = HDToolKit.anInt1811;
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       var0.glDisable(3089);
       method921();
    }
 
    static final void method926(int[] var0, int var1, int var2, int var3, int var4) {
       HDToolKit.method1835();
-      GL var5 = HDToolKit.gl;
+      GL2 var5 = HDToolKit.gl;
       var5.glRasterPos2i(var1, HDToolKit.anInt1811 - var2);
       var5.glPixelZoom(1.0F, -1.0F);
       var5.glDisable(3042);
@@ -74,7 +75,7 @@ final class Class22 {
       float var6 = var5 + (float)(var2 - 1);
       float var7 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
       float var8 = var7 - (float)(var3 - 1);
-      GL var9 = HDToolKit.gl;
+      GL2 var9 = HDToolKit.gl;
       var9.glBegin(2);
       var9.glColor3ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4);
       var9.glVertex2f(var5, var7);
@@ -90,7 +91,7 @@ final class Class22 {
       float var7 = var6 + (float)(var2 - 1);
       float var8 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
       float var9 = var8 - (float)(var3 - 1);
-      GL var10 = HDToolKit.gl;
+      GL2 var10 = HDToolKit.gl;
       var10.glBegin(2);
       var10.glColor4ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4, var5 > 255?-1:(byte)var5);
       var10.glVertex2f(var6, var8);
@@ -132,7 +133,7 @@ final class Class22 {
          int var23 = var1 + var7 - var16;
          int var24 = var1 + var7 + var15;
          HDToolKit.method1835();
-         GL var25 = HDToolKit.gl;
+         GL2 var25 = HDToolKit.gl;
          var25.glColor3ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4);
          var25.glBegin(6);
          if(var12 <= var11) {
@@ -157,7 +158,7 @@ final class Class22 {
       float var7 = var6 + (float)var2;
       float var8 = (float)(HDToolKit.anInt1811 - var1);
       float var9 = var8 - (float)var3;
-      GL var10 = HDToolKit.gl;
+      GL2 var10 = HDToolKit.gl;
       var10.glBegin(6);
       var10.glColor4ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4, var5 > 255?-1:(byte)var5);
       var10.glVertex2f(var6, var8);
@@ -184,7 +185,7 @@ final class Class22 {
          anInt451 = var3;
       }
 
-      GL var4 = HDToolKit.gl;
+      GL2 var4 = HDToolKit.gl;
       var4.glEnable(3089);
       if(anInt449 <= anInt450 && anInt448 <= anInt451) {
          var4.glScissor(anInt449, HDToolKit.anInt1811 - anInt451, anInt450 - anInt449, anInt451 - anInt448);
@@ -205,7 +206,7 @@ final class Class22 {
       float var6 = (float)var2 + 0.3F;
       float var7 = (float)HDToolKit.anInt1811 - ((float)var1 + 0.3F);
       float var8 = (float)HDToolKit.anInt1811 - ((float)var3 + 0.3F);
-      GL var9 = HDToolKit.gl;
+      GL2 var9 = HDToolKit.gl;
       var9.glBegin(2);
       var9.glColor3ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4);
       var9.glVertex2f(var5, var7);
@@ -219,7 +220,7 @@ final class Class22 {
       float var6 = var5 + (float)var2;
       float var7 = (float)(HDToolKit.anInt1811 - var1);
       float var8 = var7 - (float)var3;
-      GL var9 = HDToolKit.gl;
+      GL2 var9 = HDToolKit.gl;
       var9.glBegin(6);
       var9.glColor3ub((byte)(var4 >> 16), (byte)(var4 >> 8), (byte)var4);
       var9.glVertex2f(var5, var7);
@@ -250,7 +251,7 @@ final class Class22 {
       anInt448 = var1;
       anInt450 = var2;
       anInt451 = var3;
-      GL var4 = HDToolKit.gl;
+      GL2 var4 = HDToolKit.gl;
       var4.glEnable(3089);
       if(anInt449 <= anInt450 && anInt448 <= anInt451) {
          var4.glScissor(anInt449, HDToolKit.anInt1811 - anInt451, anInt450 - anInt449, anInt451 - anInt448);

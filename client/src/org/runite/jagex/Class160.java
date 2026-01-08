@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class160 implements Interface5 {
 
@@ -10,7 +11,7 @@ final class Class160 implements Interface5 {
 
 
    private final void method2198() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       this.anInt2187 = var1.glGenLists(2);
       var1.glNewList(this.anInt2187, 4864);
       if(this.anIntArray2189 != null) {
@@ -90,7 +91,7 @@ final class Class160 implements Interface5 {
    }
 
    public final void method21() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       if(Class106.aBoolean1441) {
          var1.glCallList(this.anInt2187 + 1);
       } else {
@@ -104,7 +105,7 @@ final class Class160 implements Interface5 {
    }
 
    public final void method22() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       HDToolKit.method1847(1);
       if(Class106.aBoolean1441) {
          var1.glCallList(this.anInt2187);
@@ -115,7 +116,7 @@ final class Class160 implements Interface5 {
    }
 
    public final void method23(int var1) {
-      GL var2 = HDToolKit.gl;
+      GL2 var2 = HDToolKit.gl;
       if(Class106.aBoolean1441 && this.anIntArray2189 != null) {
          var2.glActiveTexture('\u84c1');
          var2.glBindTexture('\u8513', this.anIntArray2189[var1 - 1]);
@@ -125,7 +126,7 @@ final class Class160 implements Interface5 {
    }
 
    private final void method2199() {
-      GL var8 = HDToolKit.gl;
+      GL2 var8 = HDToolKit.gl;
       if(this.anIntArray2189 == null) {
          this.anIntArray2189 = new int[3];
          var8.glGenTextures(3, this.anIntArray2189, 0);
@@ -205,7 +206,7 @@ final class Class160 implements Interface5 {
    public Class160() {
       if(HDToolKit.aBoolean1821 && HDToolKit.anInt1789 >= 2) {
          this.method2199();
-         GL var1 = HDToolKit.gl;
+         GL2 var1 = HDToolKit.gl;
          var1.glBindTexture('\u8513', this.anIntArray2189[0]);
          var1.glTexParameteri('\u8513', 10241, 9729);
          var1.glTexParameteri('\u8513', 10240, 9729);

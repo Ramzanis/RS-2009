@@ -1,6 +1,7 @@
 package org.runite.jagex;
 import java.nio.ByteBuffer;
 import javax.media.opengl.GL;
+import javax.media.opengl.GL2;
 
 final class Class165 implements Interface5 {
 
@@ -11,7 +12,7 @@ final class Class165 implements Interface5 {
 
 
    private final void method2251() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       this.anInt2193 = var1.glGenLists(2);
       var1.glNewList(this.anInt2193, 4864);
       var1.glActiveTexture('\u84c1');
@@ -79,19 +80,19 @@ final class Class165 implements Interface5 {
    }
 
    static final void method2253() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       var0.glClientActiveTexture(method2252());
       var0.glDisableClientState('\u8078');
       var0.glClientActiveTexture('\u84c0');
    }
 
    public final void method22() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       var1.glCallList(this.anInt2193);
    }
 
    static final void method2254() {
-      GL var0 = HDToolKit.gl;
+      GL2 var0 = HDToolKit.gl;
       var0.glClientActiveTexture(method2252());
       var0.glEnableClientState('\u8078');
       var0.glClientActiveTexture('\u84c0');
@@ -102,12 +103,12 @@ final class Class165 implements Interface5 {
    }
 
    public final void method21() {
-      GL var1 = HDToolKit.gl;
+      GL2 var1 = HDToolKit.gl;
       var1.glCallList(this.anInt2193 + 1);
    }
 
    public final void method23(int var1) {
-      GL var2 = HDToolKit.gl;
+      GL2 var2 = HDToolKit.gl;
       var2.glActiveTexture('\u84c1');
       if(!aBoolean2191 && var1 < 0) {
          var2.glDisable(3168);
@@ -164,7 +165,7 @@ final class Class165 implements Interface5 {
             ;
          }
 
-         GL var4 = HDToolKit.gl;
+         GL2 var4 = HDToolKit.gl;
          var4.glGenTextures(1, var1, 0);
          var4.glBindTexture(3552, var1[0]);
          var4.glTexImage1D(3552, 0, 6406, 8, 0, 6406, 5121, ByteBuffer.wrap(var2));
